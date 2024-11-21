@@ -15,6 +15,7 @@ let ParisTimeElement=document.querySelector("#paris .time");
 ParisTime=moment().tz("Europe/Paris");
 ParisDateElement.innerHTML=ParisTime.format("MMMM Do YYYY");
 ParisTimeElement.innerHTML=ParisTime.format("h:mm:ss[<small>]A[</small>]");}}
+
 function updateCity(event){
     let cityTimeZone=event.target.value;
     let cityName=cityTimeZone.replace("_" ," ").split("/")[1];
