@@ -8,13 +8,22 @@ losAngelesDateElement.innerHTML=losAngelesTime.format("MMMM Do YYYY");
 losAngelesTimeElement.innerHTML=losAngelesTime.format("h:mm:ss[<small>]A[</small>]");
 }
 
-let ParisElement=document.querySelector("#paris");
+ let ParisElement=document.querySelector("#paris");
 if (ParisElement){
 let ParisDateElement=document.querySelector("#paris .date");
 let ParisTimeElement=document.querySelector("#paris .time");
 ParisTime=moment().tz("Europe/Paris");
 ParisDateElement.innerHTML=ParisTime.format("MMMM Do YYYY");
-ParisTimeElement.innerHTML=ParisTime.format("h:mm:ss[<small>]A[</small>]");}}
+ParisTimeElement.innerHTML=ParisTime.format("h:mm:ss[<small>]A[</small>]");}
+
+let nairobiElement=document.querySelector("#nairobi");
+if (nairobiElement){
+let nairobiDateElement=document.querySelector("#nairobi .date");
+let nairobiTimeElement=document.querySelector("#nairobi .time");
+nairobiTime=moment().tz("Africa/Nairobi");
+nairobiDateElement.innerHTML=nairobiTime.format("MMMM Do YYYY");
+nairobiTimeElement.innerHTML=nairobiTime.format("h:mm:ss[<small>]A[</small>]");}
+}
 
 function updateCity(event){
     let cityTimeZone=event.target.value;
